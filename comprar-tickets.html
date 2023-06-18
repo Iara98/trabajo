@@ -46,7 +46,7 @@
                     </li>
 
                     <li class="nav-item">
-                        <a href="./php/comprar-tickets.html" class="nav-link text-success">Comprar tickets</a>
+                        <a href="comprar-tickets.html" class="nav-link text-success">Comprar tickets</a>
                     </li>
                 </ul>
             </div>
@@ -117,6 +117,12 @@
                 <p class="error" id="errorCorreo" ></p>
             </div>
 
+            <div class="mb-3">
+                <input class="form-control" name='cantidad' id="cantidad"
+                    placeholder="Cantidad"></input>
+                <p class="error" id="errorCantidad" ></p>
+            </div>
+
             <div class="form-floating mb-4">
                 <select id="categorias" class="form-select" id="floatingSelect" aria-label="Floating label select example">
                   <option >Opciones de categorias</option>
@@ -128,16 +134,18 @@
                 <p class="error" id="errorCategoria" ></p>
             </div>
 
+
             <div class="mb-3">
                 <input class="form-control" name='totalPagar' id="totalPagar"
-                    placeholder="Total a pagar $"></input>
+                    placeholder="Total a pagar $" on></input>
                 <p class="error" id="errorCorreo" ></p>
             </div>
 
             <div class="mb-3 col-xs-6">
-                <button name="Borrar" class="btn btn-success w-60 fs-5">Borrar</button>
-                <button name="Resumen" onClick="validarNombre(), validarApellido(), validarCharla(), validarEmail(), validarCategoria()"
-                id="resumen" class="btn btn-success w-60 fs-5">Resumen</button>
+                <button id="borrar" name="Borrar" class="btn btn-success w-60 fs-5" 
+                onClick="validarNombre(), validarApellido(), validarCharla(), validarEmail(), validarCategoria()">Borrar</button>
+                <button name="Resumen" 
+                id="resumen" class="btn btn-success w-60 fs-5" onclick="calculo()">Resumen</button>
             </div>
 
         </form>
